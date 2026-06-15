@@ -1,11 +1,32 @@
 package ui;
 
+import data.GestorDatos;
+import model.Tour;
+
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        GestorDatos  gd = new GestorDatos();
 
+        ArrayList<Tour> tours = gd.getTours();
 
+        System.out.println("-----[TOURS]-----");
+        for(Tour tour : tours){
+            System.out.println(tour);
+        }
+
+        System.out.println("-----[TOURS Con Cupos Disponibles]-----");
+
+        for(Tour tour : tours){
+
+            if(tour.getCuposDisponibles() > 0){
+                System.out.println(tour);
+            }
+
+        }
     }
 
 }
