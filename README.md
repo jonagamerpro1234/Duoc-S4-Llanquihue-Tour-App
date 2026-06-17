@@ -2,7 +2,7 @@
   <img src="https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png" width="300" alt=""/>
 </p>
 
-# 🧠 S4 - Llanquihue Tour
+# 🧠 Llanquihue Tour App
 
 Proyecto desarrollado para la asignatura **Desarrollo Orientado a Objetos I (PRY2202)** de Duoc UC.
 
