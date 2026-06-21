@@ -52,7 +52,7 @@ El caso de estudio corresponde a la agencia de turismo **Llanquihue Tour**.
 ## 🚀 Ejecución
 
 1. Abrir el proyecto en IntelliJ IDEA.
-2. Verificar que el archivo `tour.txt` se encuentre dentro de la carpeta `src/main/resources`.
+2. Verificar que el archivo `tours.txt` se encuentre dentro de la carpeta `src/main/resources`.
 3. Compilar el proyecto.
 4. Ejecutar la clase `Main`.
 5. Revisar la salida generada por consola.
@@ -78,7 +78,7 @@ Clase encargada de:
 
 * Verificar la existencia del archivo.
 * Cargar datos por defecto cuando el archivo está vacío.
-* Leer la información almacenada en `tour.txt`.
+* Leer la información almacenada en `tours.txt`.
 * Crear objetos `Tour` a partir de los datos obtenidos.
 
 ### Main
@@ -94,7 +94,7 @@ Clase principal que permite:
 
 ## 📄 Archivo de Datos
 
-El archivo `tour.txt` contiene la información de los tours utilizando el siguiente formato:
+El archivo `tours.txt` contiene la información de los tours utilizando el siguiente formato:
 
 ```text
 Volcan Osorno;Aventura;35000;8;20;Ascenso guiado
@@ -109,7 +109,6 @@ Formato:
 ```text
 Nombre;Tipo;Precio;DuracionHoras;CuposDisponibles;Descripcion
 ```
-
 ---
 
 ## ☕ Requisitos
