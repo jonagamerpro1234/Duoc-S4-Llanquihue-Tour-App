@@ -31,20 +31,20 @@ El caso de estudio corresponde a la agencia de turismo **Llanquihue Tour**.
 ## 📁 Estructura del Proyecto
 
 ```text
-src/
-└── main/
-    ├── java/
-    │   ├── model/
+📁 src/
+└── 📁 main/
+    ├── 📁 java/
+    │   ├── 📁 model/
     │   │   └── Tour.java
     │   │
-    │   ├── data/
+    │   ├── 📁 data/
     │   │   └── GestorDatos.java
     │   │
-    │   └── ui/
+    │   └── 📁 ui/
     │       └── Main.java
     │
-    └── resources/
-        └── tour.txt
+    └── 📁 resources/
+        └── tours.txt
 ```
 
 ---

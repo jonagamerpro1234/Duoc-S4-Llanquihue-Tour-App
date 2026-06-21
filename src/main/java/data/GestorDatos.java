@@ -8,11 +8,11 @@ import java.util.List;
 
 /**
  *  Clase GestorDatos
- *  Permite gestionar los datos del archivo tour.txt
+ *  Permite gestionar los datos del archivo tours.txt
  */
 public class GestorDatos {
 
-    private final String fileName = "src/main/resources/tour.txt";
+    private final String fileName = "src/main/resources/tours.txt";
 
     /**
      * Verifica que el archivo exista y contenga datos.
