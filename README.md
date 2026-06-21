@@ -33,18 +33,30 @@ El caso de estudio corresponde a la agencia de turismo **Llanquihue Tour**.
 ```text
 📁 src/
 └── 📁 main/
-    ├── 📁 java/
-    │   ├── 📁 model/
-    │   │   └── Tour.java
-    │   │
-    │   ├── 📁 data/
-    │   │   └── GestorDatos.java
-    │   │
-    │   └── 📁 ui/
-    │       └── Main.java
+    ├─── 📁 java/
+    │    ├─── 📁 data/
+    │    │   ├─── GestorDatos.java
+    │    │   └─── FileManager.java
+    │    │
+    │    ├─── 📁 model/
+    │    │   ├─── Guia.java
+    │    │   ├─── Persona.java
+    │    │   ├─── Proveedor.java
+    │    │   ├─── Rut.java
+    │    │   └─── Tour.java
+    │    │
+    │    ├─── 📁 servicios/
+    │    │   └─── TourManager.java 
+    │    │
+    │    ├─── 📁 ui/
+    │    │    └─── Main.java
+    │    │ 
+    │    └─── 📁 util/
+    │         ├─── FileUtil.java
+    │         └─── InvalidRutException.java
     │
-    └── 📁 resources/
-        └── tours.txt
+    └─── 📁 resources/
+         └─── tours.txt
 ```
 
 ---
