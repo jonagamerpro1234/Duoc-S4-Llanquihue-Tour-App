@@ -11,7 +11,6 @@ public class Persona {
     private final Rut rut;
     private String telefono;
 
-
     public Persona(String nombre, String apellido, String rut, String telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -56,11 +55,6 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", rut='" + rut + '\'' +
-                ", telefono=" + telefono +
-                '}';
+        return nombre + apellido;
     }
 }
