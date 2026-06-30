@@ -10,20 +10,25 @@ Proyecto desarrollado para la asignatura **Desarrollo Orientado a Objetos I (PRY
 
 ## 📖 Descripción
 
-Este proyecto implementa un sistema simple para la gestión de tours turísticos utilizando Programación Orientada a Objetos en Java.
+Este proyecto corresponde a la evolución del sistema **Llanquihue Tour**, desarrollado durante las actividades de la asignatura Desarrollo Orientado a Objetos I.
 
-La aplicación lee información desde archivos de texto externos, crea objetos del dominio y los almacena en colecciones para posteriormente realizar consultas y filtrados de información.
+En esta sexta semana se implementó una nueva jerarquía de clases para representar distintos servicios turísticos ofrecidos por la agencia, aplicando herencia simple, reutilización de código mediante `super(...)` y sobrescritura del método `toString()`.
+
+Además, se mantienen las funcionalidades implementadas en semanas anteriores, como la gestión de tours, guías y proveedores mediante archivos de texto externos.
 
 Durante el desarrollo se aplican conceptos fundamentales como:
 
 * Clases y Objetos.
 * Encapsulamiento.
 * Herencia.
+* Herencia simple.
 * Composición.
 * Colecciones (`ArrayList`).
 * Lectura de archivos.
 * Manejo de datos mediante archivos externos.
 * Excepciones personalizadas.
+* Uso de `super()`.
+* Sobrescritura de métodos.
 * Métodos Getter y Setter.
 * Método `toString()`.
 
@@ -38,14 +43,19 @@ El caso de estudio corresponde a la agencia de turismo **Llanquihue Tour**.
 └── 📁 main/
     ├── 📁 java/
     │   ├── 📁 data/
-    │   │   └── GestorDatos.java
+    │   │   ├── GestorDatos.java
+    │   │   └── GestorServicios.java
     │   │
     │   ├── 📁 model/
-    │   │   ├── Guia.java
     │   │   ├── Persona.java
+    │   │   ├── Guia.java
     │   │   ├── Proveedor.java
     │   │   ├── Rut.java
-    │   │   └── Tour.java
+    │   │   ├── Tour.java
+    │   │   ├── ServicioTuristico.java
+    │   │   ├── RutaGastronomica.java
+    │   │   ├── PaseoLacustre.java
+    │   │   └── ExcursionCultural.java
     │   │
     │   ├── 📁 servicios/
     │   │   └── TourManager.java
@@ -104,6 +114,22 @@ Representa un tour turístico e incluye atributos como:
 * Cupos disponibles.
 * Guía responsable.
 
+### ServicioTuristico
+
+Clase base que representa un servicio turístico de la agencia. Contiene los atributos comunes **nombre** y **duracionHoras**.
+
+### RutaGastronomica
+
+Hereda de `ServicioTuristico` e incorpora el atributo **numeroDeParadas**.
+
+### PaseoLacustre
+
+Hereda de `ServicioTuristico` e incorpora el atributo **tipoEmbarcacion**.
+
+### ExcursionCultural
+
+Hereda de `ServicioTuristico` e incorpora el atributo **lugarHistorico**.
+
 ### GestorDatos
 
 Clase encargada de:
@@ -112,6 +138,10 @@ Clase encargada de:
 * Cargar datos por defecto cuando sea necesario.
 * Leer la información almacenada en archivos externos.
 * Crear objetos del dominio a partir de los datos obtenidos.
+
+### GestorServicios
+
+Clase encargada de crear instancias de prueba de los distintos servicios turísticos y mostrarlas por consola.
 
 ### TourManager
 
@@ -130,6 +160,10 @@ Clase principal que permite:
 * Visualizar tours con cupos disponibles.
 * Mostrar los guías registrados.
 * Mostrar los proveedores registrados.
+* Acceder al submenú de servicios turísticos.
+* Visualizar rutas gastronómicas.
+* Visualizar paseos lacustres.
+* Visualizar excursiones culturales.
 
 ---
 
@@ -137,7 +171,16 @@ Clase principal que permite:
 
 ### Herencia
 
-Las clases `Guia` y `Proveedor` heredan de la clase `Persona`, reutilizando atributos y comportamientos comunes.
+Las clases `Guia` y `Proveedor` heredan de la clase `Persona`.
+
+Además, durante esta semana se implementó una segunda jerarquía de clases:
+
+```text
+ServicioTuristico
+├── RutaGastronomica
+├── PaseoLacustre
+└── ExcursionCultural
+```
 
 ### Composición
 
@@ -148,6 +191,14 @@ La clase `Persona` contiene un objeto de tipo `Rut`.
 ### Encapsulamiento
 
 Los atributos se encuentran encapsulados mediante modificadores de acceso y métodos getter y setter.
+
+### Sobrescritura de Métodos
+
+Las clases `RutaGastronomica`, `PaseoLacustre` y `ExcursionCultural` sobrescriben el método `toString()` para mostrar la información específica de cada servicio turístico.
+
+### Uso de `super()`
+
+Las subclases de `ServicioTuristico` utilizan `super(...)` para inicializar los atributos heredados de la clase base.
 
 ### Excepciones Personalizadas
 
@@ -203,6 +254,6 @@ TIPO;Nombre;Apellido;Rut;Telefono;Especialidad/Servicio
 
 ## 👨‍💻 Autor
 
-Michael Salgado
+**Michael Salgado**
 
 Desarrollo Orientado a Objetos I - Duoc UC
